@@ -14,7 +14,8 @@ def index(request):
 
 def buy(request, item_id, methods = 'POST'):
     print '*' * 10
-    print item_id
+    print items[item_id]
+    print '*' * 10
     print request.POST
     return redirect('/checkout')
 

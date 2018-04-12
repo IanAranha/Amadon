@@ -2,7 +2,7 @@ from django.conf.urls import url, include
 from . import views
 
 
-def test(request):
+def test(request, item_id):
     print '#' * 50
     print 'App level good'
     print '@' * 50
