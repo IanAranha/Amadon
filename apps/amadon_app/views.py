@@ -14,7 +14,15 @@ def index(request):
 
 def buy(request, item_id, methods = 'POST'):
     print '*' * 10
-    print items[item_id]
+    print request.POST['item_id']
+    for item in items:
+        if item['item_id'] == request.POST['item_id']:
+            print 'FINALLY!'
+        else:
+            print 'Item does not exist!'
+        current_charge = item['price'] * int(request.POST['quantity'])
+        current_charge = item['price'] * int(request.POST['quantity'])
+        print current_charge
     print '*' * 10
     print request.POST
     return redirect('/checkout')
